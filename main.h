@@ -3,12 +3,8 @@
 
 
 
-
-
-
 int _printf(const char *format, ...);
 int __putchar(char c);
-
 
 
 
