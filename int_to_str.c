@@ -1,28 +1,46 @@
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void intToStr(/*char * str, */int num)
+char * intToStr(char * a, int num)
 {
-	char a[10];
-	int i;
+	char t;
+	int i, j;
+	int negNum = num;
+	
+	if (num < 0)
+	{
+		num = num * -1;		
+	}
 // 457
 	for (i = 0; num > 0; i++)
 	{
 		a[i] = (num % 10) + '0';
 		num = num / 10;
 	}
-	list[i] = '\0';
-
-	while (*(list + q) != '\0')
+	if (negNum < 0)
 	{
-		printf("%c ", *(list + q));
-		q++;
+		a[i] = '-';
+		i++;	
 	}
 
+	a[i] = '\0';
+
+	for (j = 0, i--; j < i; j++, i--)
+	{
+		t = a[i];
+		a[i] = a[j];
+		a[j] = t;
+	}
+	// printf("%s", a);
+	return (a);
 }
 
-int main(void)
-{
-	intToStr(345);
-	return (0);
-}
+// int main(void)
+// {
+// 	char sINT[20];
+
+// 	intToStr(sINT, 345);
+
+// 	printf("%s", sINT);
+// 	return (0);
+// }

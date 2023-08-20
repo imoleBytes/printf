@@ -8,6 +8,8 @@ int main(void)
 	// _printf("my name is %s, i'm %d years old. %c! and scored 90%%.", "mike", 12, 'K');
     _printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
+	_printf("Positive:[%d]\n", 534);
+    printf("Positive:[%d]\n", 534);
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");

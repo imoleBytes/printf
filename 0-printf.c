@@ -42,7 +42,8 @@ int _printf(const char *format, ...)
 				case 'i':
 				case 'd':
 				// handle d!!!!!!!!!
-					sprintf(sINT, "%d", va_arg(args, int));
+					intToStr(sINT, va_arg(args, int));
+					// sprintf(sINT, "%d", va_arg(args, int));
 				
 					// write(1, &sINT, 4);
 					// sINT = (char [])va_arg(args, int);
