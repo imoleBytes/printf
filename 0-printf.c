@@ -43,10 +43,6 @@ int _printf(const char *format, ...)
 				case 'd':
 				// handle d!!!!!!!!!
 					intToStr(sINT, va_arg(args, int));
-					// sprintf(sINT, "%d", va_arg(args, int));
-				
-					// write(1, &sINT, 4);
-					// sINT = (char [])va_arg(args, int);
 
 					while (sINT[q] != '\0')
 					{

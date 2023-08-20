@@ -19,6 +19,9 @@ int main(void)
     // _printf("Len:[%d]\n", len);
     // printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
+
+	int ct = _printf("Positive:[%d] and %c\n", 534, 'M');
+	_printf("%i\n", ct);
     // printf("Unknown:[%r]\n");
 	/*/ printf("%d\n", numOfDirectives("%sa%%hd%c%i"));*/
 
