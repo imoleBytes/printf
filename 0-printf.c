@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 #include <stdarg.h>
 
 
@@ -26,14 +26,14 @@ int _printf(const char *format, ...)
 			switch (*(format + i + 1))
 			{
 				case 'c':
-					_putchar(va_arg(args, int));
+					__putchar(va_arg(args, int));
 					i++;
 					break;
 				case 's':
 					s = va_arg(args, char *);
 					while (*s != '\0')
 					{
-						_putchar(*s);
+						__putchar(*s);
 						s++;
 					}
 					/*printf("%s", va_arg(args, char *));*/
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 
 					while (sINT[q] != '\0')
 					{
-						_putchar(sINT[q]);
+						__putchar(sINT[q]);
 						q++;
 					}
 
@@ -57,13 +57,13 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				case '%':
-					_putchar(*(format + i + 1));
+					__putchar(*(format + i + 1));
 					i++;				
 			}
 			count++;
 		}
 		else
-			_putchar(*(format + i));
+			__putchar(*(format + i));
 		i++;
 	}
 
@@ -74,24 +74,3 @@ int _printf(const char *format, ...)
 	return (count);
 }
 
-
-
-int main(void)
-{
-	// _printf("my name is %s, i'm %d years old. %c! and scored 90%%.", "mike", 12, 'K');
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    // _printf("Address:[%p]\n", addr);
-    // printf("Address:[%p]\n", addr);
-    // _printf("Len:[%d]\n", len);
-    // printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    // printf("Unknown:[%r]\n");
-	/*/ printf("%d\n", numOfDirectives("%sa%%hd%c%i"));*/
-
-	return (0);
-}
