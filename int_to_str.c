@@ -1,5 +1,10 @@
 
-// #include <stdio.h>
+/**
+* intToStr - intToStr func
+* @a: char sring
+* @num: int
+* Return: poinyer
+*/
 
 char * intToStr(char * a, int num)
 {
@@ -11,7 +16,7 @@ char * intToStr(char * a, int num)
 	{
 		num = num * -1;		
 	}
-// 457
+
 	for (i = 0; num > 0; i++)
 	{
 		a[i] = (num % 10) + '0';
@@ -31,16 +36,6 @@ char * intToStr(char * a, int num)
 		a[i] = a[j];
 		a[j] = t;
 	}
-	// printf("%s", a);
+
 	return (a);
 }
-
-// int main(void)
-// {
-// 	char sINT[20];
-
-// 	intToStr(sINT, 345);
-
-// 	printf("%s", sINT);
-// 	return (0);
-// }

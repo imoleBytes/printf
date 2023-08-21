@@ -2,7 +2,11 @@
 #include "main.h"
 #include <stdarg.h>
 
-
+/**
+* _printf - printf func
+* @format: firsy sring
+* Return: int
+*/
 
 int _printf(const char *format, ...)
 {
@@ -12,8 +16,6 @@ int _printf(const char *format, ...)
 	char *s;
 	char sINT[20];
 	int q = 0;
-	int r;
-	int temp;
 
 
 	va_start(args, format);
@@ -43,7 +45,6 @@ int _printf(const char *format, ...)
 					break;
 				case 'i':
 				case 'd':
-				// handle d!!!!!!!!!
 					intToStr(sINT, va_arg(args, int));
 
 					while (sINT[q] != '\0')
@@ -61,7 +62,6 @@ int _printf(const char *format, ...)
 					count++;
 					i++;				
 			}
-			// count++;
 		}
 		else
 		{
@@ -72,10 +72,8 @@ int _printf(const char *format, ...)
 		i++;
 	}
 
-	// printf("\n");
 
 	va_end(args);
 
 	return (count - 1);
 }
-
