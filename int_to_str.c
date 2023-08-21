@@ -6,15 +6,15 @@
 * Return: poinyer
 */
 
-char * intToStr(char * a, int num)
+char *intToStr(char *a, int num)
 {
 	char t;
 	int i, j;
 	int negNum = num;
-	
+
 	if (num < 0)
 	{
-		num = num * -1;		
+		num = num * -1;
 	}
 
 	for (i = 0; num > 0; i++)
@@ -25,7 +25,7 @@ char * intToStr(char * a, int num)
 	if (negNum < 0)
 	{
 		a[i] = '-';
-		i++;	
+		i++;
 	}
 
 	a[i] = '\0';

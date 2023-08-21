@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0;	
+	int i = 0;
 	int count = 0;
 	char *s;
 	char sINT[20];
@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 				case '%':
 					__putchar(*(format + i + 1));
 					count++;
-					i++;				
+					i++;
 			}
 		}
 		else
