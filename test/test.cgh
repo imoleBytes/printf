@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int handle_str(char *str);
+int __putchar(char c);
+
+int main(void)
+{
+	char *name = "michael";
+	int num;
+
+	handle_str(name);
+	num = handle_str(name);
+
+	printf("%i\n", num);
+
+	return (0);
+}
+
+
+
+int handle_str(char *str)
+{
+	int ct = 0;
+
+	while (*str != '\0')
+	{
+		__putchar(*str);
+		ct++;
+		str++;
+	}
+	return (ct);
+}
+
+int __putchar(char c)
+{
+	write(1, &c, 1);
+	return (0);
+}
