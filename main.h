@@ -1,6 +1,8 @@
 #ifndef _main_h
 #define _main_h
 
+#define NUMBER_OF_CHAR 1024
+
 
 
 int _printf(const char *format, ...);
