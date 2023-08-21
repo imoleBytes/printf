@@ -27,6 +27,7 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					__putchar(va_arg(args, int));
+					count++;
 					i++;
 					break;
 				case 's':
@@ -34,6 +35,7 @@ int _printf(const char *format, ...)
 					while (*s != '\0')
 					{
 						__putchar(*s);
+						count++;
 						s++;
 					}
 					/*printf("%s", va_arg(args, char *));*/
@@ -47,6 +49,7 @@ int _printf(const char *format, ...)
 					while (sINT[q] != '\0')
 					{
 						__putchar(sINT[q]);
+						count++;
 						q++;
 					}
 
@@ -55,12 +58,17 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					__putchar(*(format + i + 1));
+					count++;
 					i++;				
 			}
-			count++;
+			// count++;
 		}
 		else
+		{
 			__putchar(*(format + i));
+			count++;
+		}
+
 		i++;
 	}
 
@@ -68,6 +76,6 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 
-	return (count);
+	return (count - 1);
 }
 
