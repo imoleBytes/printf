@@ -62,6 +62,6 @@ int main(void)
 	printf("%r\n", "hello");
 
 	_printf("%R\n", "michael");
-	printf("%R\n", "hello");
+	// printf("%R\n", "hello");
 	return (0);
 }

@@ -7,12 +7,12 @@
 * Return: int
 */
 
-int handle_R(char *str)
+int handle_R(char *s)
 {
 	int ct = 0;
 	char *p;
 
-	p = rot13(str);
+	p = rot13(s);
 
 	while (*p != '\0')
 	{
