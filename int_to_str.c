@@ -3,10 +3,11 @@
 * intToStr - intToStr func
 * @a: char sring
 * @num: int
+* @base: int
 * Return: poinyer
 */
 
-char *intToStr(char *a, int num)
+char *intToStr(char *a, int num, int base)
 {
 	char t;
 	int i, j;
@@ -19,8 +20,8 @@ char *intToStr(char *a, int num)
 
 	for (i = 0; num > 0; i++)
 	{
-		a[i] = (num % 10) + '0';
-		num = num / 10;
+		a[i] = (num % base) + '0';
+		num = num / base;
 	}
 	if (negNum < 0)
 	{

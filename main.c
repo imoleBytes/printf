@@ -45,5 +45,8 @@ int main(void)
 	cta = printf("Positive:[%d] and %c\n", 534, 'M');
 	_printf("%i\n", ct);
 	printf("%i\n", cta);
+
+	_printf("%b\n", 98);
+	printf("%b\n", 98);
 	return (0);
 }
