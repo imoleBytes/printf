@@ -4,7 +4,7 @@
 * @a: char sring
 * @num: int
 * @base: int
-* @upperr: boolean to check for x or X
+* @upper: boolean to check for x or X
 * Return: poinyer
 */
 
