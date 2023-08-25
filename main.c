@@ -48,5 +48,11 @@ int main(void)
 
 	_printf("%b\n", 98);
 	printf("%b\n", 98);
+
+	_printf("%x\n", 108);
+	printf("%x\n", 108);
+
+	_printf("%X\n", 10768578);
+	printf("%X\n", 10768578);
 	return (0);
 }

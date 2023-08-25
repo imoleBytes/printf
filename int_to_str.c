@@ -4,10 +4,11 @@
 * @a: char sring
 * @num: int
 * @base: int
+* @upperr: boolean to check for x or X
 * Return: poinyer
 */
 
-char *intToStr(char *a, int num, int base)
+char *intToStr(char *a, int num, int base, int upper)
 {
 	char t;
 	int i, j;
@@ -20,7 +21,15 @@ char *intToStr(char *a, int num, int base)
 
 	for (i = 0; num > 0; i++)
 	{
-		a[i] = (num % base) + '0';
+		if ((num % base) > 9)
+		{
+			if (upper == 1)
+				a[i] = ((num % base) - 10) + 'A';
+			else
+				a[i] = ((num % base) - 10) + 'a';
+		}
+		else
+			a[i] = (num % base) + '0';
 		num = num / base;
 	}
 	if (negNum < 0)
