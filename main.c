@@ -38,8 +38,8 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	_printf("Unknown:[%r]\n");
-	printf("Unknown:[%r]\n");
+	_printf("Unknown:[%r]\n", "hello");
+	printf("Unknown:[%r]\n", "hello");
 
 	ct = _printf("Positive:[%d] and %c\n", 534, 'M');
 	cta = printf("Positive:[%d] and %c\n", 534, 'M');
@@ -58,7 +58,7 @@ int main(void)
 	_printf("Unsigned octal:[%o]\n", 1085);
 	printf("Unsigned octal:[%o]\n", 1085);
 
-	_printf("%r\n", "hello");
+	_printf("%r\n", "michael");
 	printf("%r\n", "hello");
 	return (0);
 }
