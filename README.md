@@ -1,4 +1,4 @@
-## First alx partner project. 
+## First alx partner project.
 Printf project
 
 # Contributors:

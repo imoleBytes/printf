@@ -7,7 +7,7 @@
 
 int _printf(const char *format, ...);
 int __putchar(char c);
-char * intToStr(char * a, int num, int base, int upper);
+char *intToStr(char *a, int num, int base, int upper);
 int handle_str(char *str);
 void _print_rev_recursion(char *s, int *ctt);
 int handle_r(char *str);
