@@ -60,6 +60,10 @@ int _printf(const char *format, ...)
 					count += handle_r(va_arg(args, char *));
 					i++;
 					break;
+				case 'R':
+					count += handle_R(va_arg(args, char *));
+					i++;
+					break;
 				case '%':
 					count += handle_percent_sign(*(format + i + 1));
 					i++;
