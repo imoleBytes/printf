@@ -57,5 +57,8 @@ int main(void)
 
 	_printf("Unsigned octal:[%o]\n", 1085);
 	printf("Unsigned octal:[%o]\n", 1085);
+
+	_printf("%r\n", "hello");
+	printf("%r\n", "hello");
 	return (0);
 }
