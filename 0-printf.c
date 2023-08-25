@@ -32,7 +32,12 @@ int _printf(const char *format, ...)
 					break;
 				case 'i':
 				case 'd':
-					intToStr(sINT, va_arg(args, int));
+					intToStr(sINT, va_arg(args, int), 10);
+					count += handle_str(sINT);
+					i++;
+					break;
+				case 'b':
+					intToStr(sINT, va_arg(args, int), 2);
 					count += handle_str(sINT);
 					i++;
 					break;
