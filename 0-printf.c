@@ -36,6 +36,11 @@ int _printf(const char *format, ...)
 					count += handle_str(sINT);
 					i++;
 					break;
+				case 'o':
+					intToStr(sINT, va_arg(args, int), 8, 0);
+					count += handle_str(sINT);
+					i++;
+					break;
 				case 'b':
 					intToStr(sINT, va_arg(args, int), 2, 0);
 					count += handle_str(sINT);
